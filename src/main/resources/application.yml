@@ -1,0 +1,22 @@
+server:
+  servlet:
+    context-path: "/my-app"
+  port: 8181
+
+limits:
+  initial-limit: 10000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+  output:
+    ansi:
+      enabled: ALWAYS
+    jpa:
+      show-sql: true
